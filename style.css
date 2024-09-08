@@ -1,0 +1,153 @@
+body {
+    font: 18px 'Inter', sans-serif;
+    background-color: rgb(248, 252, 255);
+}
+
+main {
+    width: 600px;
+    height: 400px;
+    border-radius: 8px;
+    margin: 24px auto;
+    box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.2);
+    padding: 24px;
+    background-color: white;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+#status {
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+    min-height: calc(8px - 3em);
+    p {
+        padding: 4px;
+    }
+}
+
+.green {
+    background-color: lightgreen;
+    color: #006400;
+}
+
+.red {
+    background-color: rgb(238, 144, 144);
+    color: #640000;
+}
+
+h1 {
+    height: 2.9em;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.3em;
+    margin: 0;
+}
+
+.form {
+    display: flex;
+    gap: 4px;
+
+    input,
+    button {
+        font-size: 1em;
+    }
+
+    input {
+        background-color: rgb(243, 243, 243);
+        outline: none;
+        padding: 4px 12px;
+        width: 100%;
+        border-radius: 6px 0px 0px 6px;
+        border: none;
+    }
+
+    input:focus,
+    button:focus,
+    button:hover {
+        outline: 2px solid blue;
+    }
+
+    button {
+        width: 150px;
+        padding: 4px 12px;
+        background-color: rgb(143, 225, 252);
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-radius: 0px 6px 6px 0px;
+        transition: background-color 0.3s;
+    }
+
+    button:active {
+        background-color: blue;
+        color: white;
+    }
+}
+
+#renameTodo-form {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+
+    li {
+        padding: 4px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        transition: all .5s;
+        margin-bottom: 12px;
+
+        span {
+            display: flex;
+            gap: 8px;
+        }
+    }
+
+    li:hover {
+        background-color: rgb(220, 246, 255);
+    }
+}
+
+#clearTodos-form {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+
+    button {
+        border: 2px solid transparent;
+        outline: none;
+        background-color: transparent;
+        color: red;
+        cursor: pointer;
+        transition: letter-spacing .5s;
+        font-size: 1em;
+        letter-spacing: .2em;
+    }
+
+    button:hover {
+        letter-spacing: .4em;
+    }
+
+    button:focus {
+        border: 2px solid blue;
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 800px) {
+    main {
+        width: 400px;
+    }
+}
+
+@media (max-width: 496px) {
+    main {
+        width: auto;
+        margin: 24px;
+    }
+}
